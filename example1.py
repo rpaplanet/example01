@@ -23,6 +23,7 @@ try:
         #cp = cmd.run("git pull origin main", check=True, shell=True)
         cp = cmd.run("git status", check=True, shell=True)
         cp = cmd.run("git add .", check=True, shell=True)
+        print(cp.returncode)
         cp = cmd.run(" git commit --allow-empty-message -m '' ", check=True, shell=True)
         print(cp.returncode)
         if cp.returncode==0:
