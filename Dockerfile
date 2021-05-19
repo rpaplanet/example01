@@ -2,7 +2,7 @@ FROM python:3-alpine
 WORKDIR /usr/src/app
 EXPOSE 8000
 COPY requirements.txt .
-COPY .git/ .
+COPY .git .
 RUN pip install -qr requirements.txt
 RUN apk update
 RUN apk upgrade
