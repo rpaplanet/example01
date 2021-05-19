@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 root@GSOC-Automation:~/yogesh/example01# clear
 root@GSOC-Automation:~/yogesh/example01# python3 example1.py
 Current ansible-core version is 2.11.0
@@ -74,3 +75,47 @@ Branch 'main' set up to track remote branch 'main' from 'origin'.
 To https://github.com/rpaplanet/example01.git
    195a8e9..0436543  main -> main
 thanks! result is updated successfully
+=======
+root@GSOC-Automation:~/yogesh/example01# clear
+root@GSOC-Automation:~/yogesh/example01# python3 example1.py
+Current ansible-core version is 2.11.0
+Are you sure want to update? (Y/N) Y
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   Dockerfile
+
+no changes added to commit (use "git add" and/or "git commit -a")
+[main 195a8e9]
+ Committer: root <root@GSOC-Automation.0p2ayxpw0nwujd3ox5brx3psog.parx.internal.cloudapp.net>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+Username for 'https://github.com': rpaplanet
+Password for 'https://rpaplanet@github.com':
+Counting objects: 6, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 631 bytes | 631.00 KiB/s, done.
+Total 6 (delta 5), reused 0 (delta 0)
+remote: Resolving deltas: 100% (5/5), completed with 3 local objects.
+To https://github.com/rpaplanet/example01.git
+   ea29f2e..195a8e9  main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+thanks! result is updated successfully
+>>>>>>> 043654372105d0bf73897352706e328d48281aaa
