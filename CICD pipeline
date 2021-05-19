@@ -1,0 +1,52 @@
+-rw-r--r-- 1 root    root    1295 May 19 03:27 1
+-rw-rw-r-- 1 socuser socuser  259 May 19 03:48 Dockerfile
+drwxr-xr-x 3 root    root    4096 May 19 03:14 Example01
+-rw-rw-r-- 1 socuser socuser   11 May 19 02:36 README.md
+-rw-rw-r-- 1 socuser socuser 1357 May 19 03:41 example1.py
+-rw-rw-r-- 1 socuser socuser   16 May 19 02:36 requirements.txt
+drwxrwxr-x 2 socuser socuser 4096 May 19 02:45 result
+-rw-rw-r-- 1 socuser socuser   38 May 19 03:41 result.txt
+root@GSOC-Automation:~/yogesh/example01# docker build -t rpaplanet/example01 .
+Sending build context to Docker daemon  204.8kB
+Step 1/12 : FROM python:3-alpine
+ ---> 95795c6eb47f
+Step 2/12 : WORKDIR /usr/src/app
+ ---> Using cache
+ ---> 1f7699fd0c4f
+Step 3/12 : EXPOSE 8000
+ ---> Using cache
+ ---> 9d06b8ece7e0
+Step 4/12 : COPY requirements.txt .
+ ---> Using cache
+ ---> bf6e3e74249b
+Step 5/12 : COPY .git .
+ ---> Using cache
+ ---> 51f6e2cc5db6
+Step 6/12 : RUN pip install -qr requirements.txt
+ ---> Using cache
+ ---> bec51c09ae20
+Step 7/12 : RUN apk update
+ ---> Using cache
+ ---> 63580c8bff28
+Step 8/12 : RUN apk upgrade
+ ---> Using cache
+ ---> d0b46d50d3d4
+Step 9/12 : RUN apk add git
+ ---> Using cache
+ ---> f4e7c72bb7ea
+Step 10/12 : RUN git config --unset core.bare
+ ---> Using cache
+ ---> 1ebca814c6d7
+Step 11/12 : COPY example1.py .
+ ---> Using cache
+ ---> 1f49f0c586b8
+Step 12/12 : CMD ["python3", "./example1.py"]
+ ---> Using cache
+ ---> 9bc2fc367671
+Successfully built 9bc2fc367671
+Successfully tagged rpaplanet/example01:latest
+root@GSOC-Automation:~/yogesh/example01# docker run --rm -it  rpaplanet/example01
+Current ansible-core version is 2.11.0
+Are you sure want to update? (Y/N) Y
+fatal: this operation must be run in a work tree
+something went wrong:: Command 'git status' returned non-zero exit status 128.
