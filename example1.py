@@ -25,7 +25,7 @@ try:
         cp = cmd.run("git add .", check=True, shell=True)
         cp = cmd.run(" git commit --allow-empty-message -m '' ", check=True, shell=True)
         if cp.returncode==0:
-            print("no changes added to commit.")
+            print("no changes added to commit.so, unable to update")
         else:
             cp = cmd.run("git push -u origin main ", check=True, shell=True)
             print("thanks! result is updated successfully")
