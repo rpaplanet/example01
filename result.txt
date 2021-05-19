@@ -1,0 +1,1 @@
+Current ansible-core version is 2.11.0

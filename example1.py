@@ -18,8 +18,8 @@ try:
         with open("result.txt", "w") as f:
             f.write('Current ansible-core version is {}'.format(req.json()['info']['version']))
         cp = cmd.run("git add .", check=True, shell=True)
-        cp = cmd.run("git commit -a ", check=True, shell=True)
-        cp = cmd.run("git push -u origin1 main ", check=True, shell=True)
+        cp = cmd.run(" git commit --allow-empty-message -m '' ", check=True, shell=True)
+        cp = cmd.run("git push -u origin main ", check=True, shell=True)
         print("thanks! result is updated")
     elif value.lower() == "n":
         print("Bye")
