@@ -24,6 +24,7 @@ try:
         cp = cmd.run("git status", check=True, shell=True)
         cp = cmd.run("git add .", check=True, shell=True)
         cp = cmd.run(" git commit --allow-empty-message -m '' ", check=True, shell=True)
+        print(cp)
         cp = cmd.run("git push -u origin main ", check=True, shell=True)
         print("thanks! result is updated successfully")
     elif value.lower() == "n":
